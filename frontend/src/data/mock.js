@@ -1,114 +1,137 @@
 export const navItems = [
-  { label: 'Platform', href: '#platform' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Use Cases', href: '#use-cases' },
-  { label: 'Resources', href: '#resources' },
-  { label: 'Plans', href: '#plans' },
-  { label: 'Partnership', href: '#partnership' },
-  { label: 'Company', href: '#company' },
+  { label: 'Beranda', href: '#hero' },
+  { label: 'Layanan', href: '#layanan' },
+  { label: 'Portofolio', href: '#portofolio' },
+  { label: 'Proses', href: '#proses' },
+  { label: 'Tentang', href: '#tentang' },
+  { label: 'Kontak', href: '#kontak' },
 ];
 
-export const gapBlocks = [
-  {
-    label: 'AI.',
-    body: 'Two million computer science students graduate every year. AI has dramatically lowered the cost and speed of code deployment.',
-  },
-  {
-    label: 'GAP.',
-    body: 'Legacy ERP software solves 70%. The other 30% requires systems engineers who take a decade to train. Near-zero are entering the market.',
-  },
-  {
-    label: 'CLOSED.',
-    body: 'Hero closes the gap with software, not labor. A new agent every year, against the highest-cost workflow your team still does by hand.',
-  },
+export const trustBadges = [
+  { name: 'SNI Certified', sub: 'Material Standar Nasional' },
+  { name: 'ISO 9001', sub: 'Manajemen Mutu' },
+  { name: 'Garansi 2 Tahun', sub: 'Struktur & Pengerjaan' },
+  { name: '10+ Tahun', sub: 'Pengalaman Industri' },
+  { name: 'Free Survey', sub: 'Konsultasi Tanpa Biaya' },
+  { name: '500+ Proyek', sub: 'Rumah & Komersial' },
 ];
 
-export const platformCards = [
+export const services = [
   {
-    title: 'Answers',
-    desc: 'Agents that provide real-time, analyst-level insights across your critical business data without waiting for reports or manual analysis.',
-    href: '#answers',
+    no: '01',
+    title: 'Kanopi Baja Ringan',
+    desc: 'Kanopi rumah, carport, dan teras dengan rangka baja ringan zincalume yang ringan namun kokoh. Anti karat, anti rayap, tahan cuaca ekstrem.',
+    tags: ['Zincalume', 'Galvalum', 'Powder Coating'],
+    img: 'https://images.pexels.com/photos/33652618/pexels-photo-33652618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   },
   {
-    title: 'Actions',
-    desc: "AI agents that take action inside your ERP. Configuration changes, journal entries, procurement matching, and month-end close. Hero doesn't recommend what to do. It does it.",
-    href: '#actions',
+    no: '02',
+    title: 'Kanopi Alderon & Polycarbonate',
+    desc: 'Atap kanopi Alderon RS, Twinlite, dan polycarbonate solid. Peredam panas & suara, tampilan modern, garansi warna hingga 15 tahun.',
+    tags: ['Alderon RS', 'Twinlite', 'Solarlite'],
+    img: 'https://images.pexels.com/photos/33181595/pexels-photo-33181595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   },
   {
-    title: 'Experts',
-    desc: 'AI handles the repetitive work. We route the rest to the best engineers globally. Human-assisted tickets are billed based on complexity on a sliding scale. Replace or extend your current AMS provider.',
-    href: '#experts',
-  },
-];
-
-export const caseStudies = [
-  {
-    tag: 'Beyond KTLO',
-    title: 'Go Beyond KTLO with Hero Pro.',
-    body: 'Keeping the lights on is the baseline. Hero takes it further. Every twelve months, autonomous agent build ships a new custom agent against your biggest manual workflow. Your support footprint shrinks every year you run Hero.',
-    img: 'https://www.dayos.com/assets/images-next/subpillars/accounting-generalLedger.webp',
+    no: '03',
+    title: 'Pagar & Gerbang',
+    desc: 'Pagar minimalis, klasik, hingga desain kustom. Gerbang manual maupun otomatis dengan finishing cat duco atau powder coating premium.',
+    tags: ['Minimalis', 'Klasik', 'Otomatis'],
+    img: 'https://images.unsplash.com/photo-1700308232117-5cfe8282e8ae?crop=entropy&cs=srgb&fm=jpg&q=85',
   },
   {
-    tag: 'Agentic Workflows',
-    title: 'Streamline Manual Processes with Agentic Workflows.',
-    body: 'Named the Top Strategic Tech Trend of 2025 by Gartner, Dayos leads the way in Agentic AI for enterprise business apps.',
-    img: 'https://www.dayos.com/assets/images-next/subpillars/it-integrate.webp',
+    no: '04',
+    title: 'Railing Tangga & Balkon',
+    desc: 'Railing stainless steel, tempered glass, dan kombinasi kayu. Presisi las argon, finishing halus, aman untuk keluarga.',
+    tags: ['Stainless', 'Kaca', 'Custom'],
+    img: 'https://images.unsplash.com/photo-1635348180022-2f7715fdecfa?crop=entropy&cs=srgb&fm=jpg&q=85',
   },
   {
-    tag: 'Month-End Close',
-    title: 'Reduce month-end close time by 20% with Agentic AI.',
-    body: 'Experience an accelerated close process and cost savings beyond your ERP system with our AI month-end close agent.',
-    img: 'https://www.dayos.com/assets/images-next/subpillars/accounting-accountsReceivable.webp',
-  },
-];
-
-export const integrations = [
-  { name: 'Oracle', logo: 'https://a.storyblok.com/f/314917/91x36/8b0e094cec/oracle-white.svg' },
-  { name: 'SAP', logo: 'https://a.storyblok.com/f/314917/91x36/788e78ae7f/sap-white.svg' },
-  { name: 'Workday', logo: 'https://a.storyblok.com/f/314917/91x36/5571b784b0/workday-white.svg' },
-  { name: 'ServiceNow', logo: 'https://a.storyblok.com/f/314917/91x36/8f7cee8b5d/servicenow-white.svg' },
-  { name: 'Coupa', logo: 'https://a.storyblok.com/f/314917/91x36/de06bec0c1/coupa-white.svg' },
-  { name: 'Atlassian Jira', logo: 'https://a.storyblok.com/f/314917/91x36/ddde8dbfab/jira-white.svg' },
-  { name: 'Anaplan', logo: 'https://a.storyblok.com/f/314917/91x36/77fa7a6831/anaplan-white.svg' },
-  { name: 'Slack', logo: 'https://a.storyblok.com/f/314917/91x36/d4fe0e1078/slack-white.svg' },
-];
-
-export const solutionTiles = [
-  { name: 'Accounting', img: 'https://a.storyblok.com/f/314917/1440x1440/9608be63d1/accounting.png/m/filters:format(webp):quality(85)' },
-  { name: 'HR', img: 'https://a.storyblok.com/f/314917/1440x1440/f891bad3bb/hr.png/m/filters:format(webp):quality(85)' },
-  { name: 'Procurement', img: 'https://a.storyblok.com/f/314917/1440x1440/710cd19f0f/procurement.png/m/filters:format(webp):quality(85)' },
-  { name: 'IT', img: 'https://a.storyblok.com/f/314917/1440x1440/52afb0dc76/it.png/m/filters:format(webp):quality(85)' },
-  { name: 'Finance', img: 'https://a.storyblok.com/f/314917/1440x1440/54fd8804ca/finance.png/m/filters:format(webp):quality(85)' },
-];
-
-export const teamCards = [
-  {
-    name: 'Information Technology',
-    desc: 'Reduce rising SaaS and labor costs with efficient agentic workflows that deliver quality support and help you be a better business partner.',
-    img: 'https://a.storyblok.com/f/314917/464x464/42b166f9b7/it.jpg/m/filters:format(webp):quality(85)',
+    no: '05',
+    title: 'Rolling Door & Folding Gate',
+    desc: 'Rolling door untuk ruko, gudang, dan garasi. Sistem manual maupun motor otomatis merek berkualitas dengan pemasangan presisi.',
+    tags: ['Manual', 'Otomatis', 'Perforated'],
+    img: 'https://images.pexels.com/photos/32494216/pexels-photo-32494216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   },
   {
-    name: 'Accounting',
-    desc: 'Empower your team with AI to reduce manual workloads, manage month-end close, and achieve more with fewer resources.',
-    img: 'https://a.storyblok.com/f/314917/464x464/b91f264e0b/accounting.jpg/m/filters:format(webp):quality(85)',
-  },
-  {
-    name: 'Human Resources',
-    desc: 'Simplify HR with employee self-service powered by AI. Answer policy questions, manage benefits, and ensure satisfaction across the board.',
-    img: 'https://a.storyblok.com/f/314917/464x464/3bbb323727/hr.jpg/m/filters:format(webp):quality(85)',
-  },
-  {
-    name: 'Finance',
-    desc: 'Agentic AI eliminates errors by integrating headcount, cost centers, and product data into a reliable, repeatable process—no more manual data collection or spreadsheets.',
-    img: 'https://a.storyblok.com/f/314917/464x464/55a7b520bb/finance.jpg/m/filters:format(webp):quality(85)',
-  },
-  {
-    name: 'Procurement',
-    desc: 'Prevent costly errors before they happen. Agentic AI analyzes procurement data, flags duplicates, and connects the dots between contracts, invoices, and payments.',
-    img: 'https://a.storyblok.com/f/314917/464x464/cd2f5cc8ca/procurement.jpg/m/filters:format(webp):quality(85)',
+    no: '06',
+    title: 'Konstruksi Baja Berat',
+    desc: 'Struktur baja WF, H-Beam, dan CNP untuk gudang, workshop, mezzanine, hingga bangunan komersial. Perhitungan struktur terpercaya.',
+    tags: ['WF', 'H-Beam', 'Mezzanine'],
+    img: 'https://images.unsplash.com/photo-1527335988388-b40ee248d80c?crop=entropy&cs=srgb&fm=jpg&q=85',
   },
 ];
 
-export const productShot = 'https://a.storyblok.com/f/314917/1634x1248/c71656cb82/mbp.png/m/filters:format(webp):quality(85)';
+export const portfolio = [
+  { title: 'Kanopi Alderon RS - Bandung', cat: 'Kanopi', img: 'https://images.pexels.com/photos/33652618/pexels-photo-33652618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1100&w=940', span: 'row-span-2' },
+  { title: 'Gerbang Minimalis - Jakarta', cat: 'Pagar & Gerbang', img: 'https://images.unsplash.com/photo-1753596726704-5c4bd0357742?w=900&q=85', span: '' },
+  { title: 'Railing Stainless - Depok', cat: 'Railing', img: 'https://images.unsplash.com/photo-1635348180022-2f7715fdecfa?w=900&q=85', span: '' },
+  { title: 'Konstruksi Gudang - Bekasi', cat: 'Konstruksi Baja', img: 'https://images.unsplash.com/photo-1527335988388-b40ee248d80c?w=1200&q=85', span: 'col-span-2' },
+  { title: 'Pagar Klasik - Tangerang', cat: 'Pagar', img: 'https://images.unsplash.com/photo-1700308232117-5cfe8282e8ae?w=900&q=85', span: '' },
+  { title: 'Rolling Door Ruko - Bogor', cat: 'Rolling Door', img: 'https://images.pexels.com/photos/32494216/pexels-photo-32494216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=940', span: '' },
+  { title: 'Kanopi Baja Ringan - Depok', cat: 'Kanopi', img: 'https://images.pexels.com/photos/12192753/pexels-photo-12192753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=940', span: '' },
+  { title: 'Tangga Industrial - Jakarta', cat: 'Railing', img: 'https://images.pexels.com/photos/38073198/pexels-photo-38073198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1100&w=940', span: 'row-span-2' },
+];
 
-export const heroImage = 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=1200&q=80&auto=format&fit=crop';
+export const whyBlocks = [
+  {
+    label: 'PRESISI.',
+    body: 'Setiap sambungan las diperiksa oleh welder bersertifikat. Toleransi kurang dari 1 mm dari desain. Bukan sekadar rapi — tapi tepat.',
+  },
+  {
+    label: 'GARANSI.',
+    body: 'Kami berani menjamin struktur & pengerjaan hingga 2 tahun. Bebas biaya perbaikan bila terjadi kegagalan struktur akibat kesalahan pengerjaan.',
+  },
+  {
+    label: 'JUJUR.',
+    body: 'Harga jelas di awal, tanpa biaya siluman. Anda tahu persis material apa yang dipakai, dari mana asalnya, dan kenapa harganya segitu.',
+  },
+  {
+    label: 'CEPAT.',
+    body: 'Survey dalam 24 jam. Penawaran maksimal 2 hari kerja. Rata-rata pengerjaan proyek residensial selesai 30% lebih cepat dari kompetitor.',
+  },
+];
+
+export const process = [
+  { step: '01', title: 'Chat WhatsApp', desc: 'Ceritakan kebutuhan Anda lewat WhatsApp. Tim kami merespons dalam hitungan menit.', icon: 'MessageCircle' },
+  { step: '02', title: 'Survey Lokasi', desc: 'Tim survey datang gratis ke lokasi untuk mengukur, memotret, dan berdiskusi.', icon: 'MapPin' },
+  { step: '03', title: 'Desain & RAB', desc: 'Kami buatkan desain 3D dan RAB detail. Anda tahu persis apa yang Anda bayar.', icon: 'PenTool' },
+  { step: '04', title: 'Produksi', desc: 'Fabrikasi di workshop kami. Foto progres dikirim berkala via WhatsApp.', icon: 'Hammer' },
+  { step: '05', title: 'Instalasi', desc: 'Pemasangan di lokasi oleh tim berpengalaman. Rapi, cepat, tanpa merusak area sekitar.', icon: 'Wrench' },
+  { step: '06', title: 'Serah Terima & Garansi', desc: 'Pengecekan bersama, penyerahan kartu garansi, dan konsultasi perawatan gratis.', icon: 'ShieldCheck' },
+];
+
+export const stats = [
+  { num: '500+', label: 'Proyek Selesai' },
+  { num: '10', label: 'Tahun Pengalaman' },
+  { num: '4.9/5', label: 'Rating Pelanggan' },
+  { num: '15', label: 'Kota Terjangkau' },
+];
+
+export const testimonials = [
+  {
+    name: 'Pak Budi Santoso',
+    role: 'Pemilik Rumah, Depok',
+    body: 'Kanopi Alderon-nya rapi banget, tim kerjanya cepat dan bersih. Sudah 3 tahun tidak ada masalah sama sekali. Recommended.',
+  },
+  {
+    name: 'Ibu Rina Wijaya',
+    role: 'Interior Designer, Jakarta',
+    body: 'Saya sering kolaborasi dengan Realisteel untuk railing dan pagar custom. Detail las argonnya premium, cocok untuk proyek high-end klien saya.',
+  },
+  {
+    name: 'Pak Hendra Kusuma',
+    role: 'Owner Ruko, Bekasi',
+    body: 'Bangun gudang 400m2 dengan struktur baja WF. Selesai lebih cepat dari deadline, harga transparan. Tidak ada biaya tambahan mendadak.',
+  },
+  {
+    name: 'Ibu Sarah Amelia',
+    role: 'Pemilik Cafe, Bogor',
+    body: 'Fasad besi hollow custom untuk cafe saya jadi ikonik banget. Banyak yang tanya "dibuatin dimana?". Terima kasih Realisteel!',
+  },
+];
+
+export const partners = [
+  'BlueScope Zacs', 'Alderon', 'Bondor', 'Krakatau Steel', 'Gunung Garuda', 'Sunrise Steel', 'Nippon Paint', 'Jotun',
+];
+
+export const WA_LINK = 'https://wa.me/6281234567890?text=Halo%20Realisteel%2C%20saya%20ingin%20konsultasi%20proyek.';

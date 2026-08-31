@@ -47,7 +47,7 @@ const socialLinks = [
 const contactInfo = [
   {
     icon: <MapPin size={16} className="shrink-0 mt-0.5" />,
-    text: 'Jl. Riung Arum Barat 7 No.10, Cisaranten Kidul, Kec. Gedebage, Kota Bandung, Jawa Barat 40295',
+    text: 'Jl. Saluyu Indah Raya No.2A, RT.04/RW.10, Derwati, Kec. Rancasari, Kota Bandung, Jawa Barat 40292',
     href: 'https://maps.google.com/?q=Realisteel+Bandung',
   },
   {
@@ -167,7 +167,6 @@ export default function Footer() {
                 </h5>
                 <ul className="space-y-3">
                   {col.links.map((link) => {
-                    // Fallback ke #kontak jika link tidak ada di mapping (misal: Wilayah)
                     const target = linkTargetMap[link] || '#kontak';
                     return (
                       <li key={link}>

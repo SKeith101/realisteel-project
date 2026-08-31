@@ -40,11 +40,11 @@ export default function Header() {
     >
       <div className="mx-auto px-6 lg:px-10 flex items-center justify-between gap-6">
         <a href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="flex items-center shrink-0">
-          <img
-            src="/background/logo-realisteeel.png"
-            alt="Realisteel"
-            className="h-9 lg:h-10 w-auto object-contain"
-          />
+            <img
+              src="/background/logo-realisteeel.png"
+              alt="Realisteel"
+              className="h-16 sm:h-20 lg:h-30 w-auto object-contain max-h-none"
+            />
         </a>
 
         <nav className="hidden lg:flex items-center bg-white/70 backdrop-blur-md rounded-full px-2 py-1.5 shadow-sm border border-black/5">
@@ -73,7 +73,7 @@ export default function Header() {
         </div>
 
         <button
-          className={`lg:hidden p-2 rounded-full border transition-colors ${
+          className={`lg:hidden p-4 rounded-full border transition-colors ${
             scrolled
               ? 'bg-neutral-100 border-black/10 text-black'
               : 'bg-black/20 backdrop-blur-sm border-white/20 text-white'
@@ -81,7 +81,7 @@ export default function Header() {
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
 

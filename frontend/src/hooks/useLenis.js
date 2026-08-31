@@ -1,40 +1,37 @@
 import { useEffect } from 'react';
-import Lenis from 'lenis';
+import { useLenis } from 'lenis/react';
 
-export default function useLenis() {
+export default function useAnchorScroll() {
+  const lenis = useLenis();
+
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.15,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.5,
-    });
+    if (!lenis) return;
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Anchor click handler
-    const onAnchor = (e) => {
+    const onAnchorClick = (e) => {
       const target = e.target.closest('a[href^="#"]');
       if (!target) return;
-      const id = target.getAttribute('href');
-      if (id && id.length > 1) {
-        const el = document.querySelector(id);
+
+      const href = target.getAttribute('href');
+      if (!href) return;
+
+      // Handle top / hero scrolling smoothly without offset jump
+      if (href === '#' || href === '#hero') {
+        e.preventDefault();
+        lenis.scrollTo(0, { duration: 1.4 });
+        return;
+      }
+
+      // Handle section anchor scrolling with smooth offset
+      if (href.length > 1) {
+        const el = document.querySelector(href);
         if (el) {
           e.preventDefault();
-          lenis.scrollTo(el, { offset: -80 });
+          lenis.scrollTo(el, { offset: -80, duration: 1.4 });
         }
       }
     };
-    document.addEventListener('click', onAnchor);
 
-    return () => {
-      document.removeEventListener('click', onAnchor);
-      lenis.destroy();
-    };
-  }, []);
+    document.addEventListener('click', onAnchorClick, true);
+    return () => document.removeEventListener('click', onAnchorClick, true);
+  }, [lenis]);
 }

@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { useState } from 'react';
+import { useLenis } from 'lenis/react';
 
 export default function ScrollProgress() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 25, mass: 0.1 });
+  const [progress, setProgress] = useState(0);
+
+  useLenis(({ progress: p }) => {
+    setProgress(p);
+  });
 
   return (
-    <motion.div
-      style={{ scaleX }}
-      className="fixed top-0 left-0 right-0 h-[3px] bg-[#f5d949] z-[60] origin-left"
+    <div
+      style={{ transform: `scaleX(${progress})` }}
+      className="fixed top-0 left-0 right-0 h-[3px] bg-[#C62828] z-[60] origin-left transform-gpu transition-transform duration-75"
     />
   );
 }

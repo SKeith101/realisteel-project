@@ -1,137 +1,143 @@
 export const navItems = [
   { label: 'Beranda', href: '#hero' },
   { label: 'Layanan', href: '#layanan' },
-  { label: 'Portofolio', href: '#portofolio' },
-  { label: 'Proses', href: '#proses' },
+  { label: 'Galeri', href: '#portofolio' },
   { label: 'Tentang', href: '#tentang' },
+  { label: 'Proses', href: '#proses' },
   { label: 'Kontak', href: '#kontak' },
 ];
 
 export const trustBadges = [
   { name: 'SNI Certified', sub: 'Material Standar Nasional' },
-  { name: 'ISO 9001', sub: 'Manajemen Mutu' },
-  { name: 'Garansi 2 Tahun', sub: 'Struktur & Pengerjaan' },
-  { name: '10+ Tahun', sub: 'Pengalaman Industri' },
+  { name: 'Pengerjaan Rapi & Presisi', sub: 'Detail sempurna di setiap proses' },
+  { name: 'Garansi', sub: 'Garansi pekerjaan dan after sales' },
+  { name: 'Respon Cepat', sub: 'Fast respon & Estimasi cepat' },
   { name: 'Free Survey', sub: 'Konsultasi Tanpa Biaya' },
-  { name: '500+ Proyek', sub: 'Rumah & Komersial' },
+  { name: 'Custom Specialist', sub: 'Spesialis di bidangnya' },
 ];
+
+// All images optimized: request only ~800px wide WebP, tiny file sizes for smooth scroll
+const UP = (id) => `https://images.unsplash.com/${id}?w=800&q=70&fm=webp&auto=format&fit=crop`;
+const PX = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop`;
+const PX_TALL = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=800&h=1100&fit=crop`;
 
 export const services = [
   {
     no: '01',
-    title: 'Kanopi Baja Ringan',
-    desc: 'Kanopi rumah, carport, dan teras dengan rangka baja ringan zincalume yang ringan namun kokoh. Anti karat, anti rayap, tahan cuaca ekstrem.',
-    tags: ['Zincalume', 'Galvalum', 'Powder Coating'],
-    img: 'https://images.pexels.com/photos/33652618/pexels-photo-33652618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'Kanopi Minimalis',
+    desc: 'Pelindung area carport dan teras dari hujan serta terik matahari. Dibuat rapi dengan pilihan atap dingin yang bikin suasana rumah tetap adem dan elegan.',
+    tags: ['Carport', 'Atap Alderon', 'Polycarbonate'],
+    img: 'service/kanopi.avif',
   },
   {
     no: '02',
-    title: 'Kanopi Alderon & Polycarbonate',
-    desc: 'Atap kanopi Alderon RS, Twinlite, dan polycarbonate solid. Peredam panas & suara, tampilan modern, garansi warna hingga 15 tahun.',
-    tags: ['Alderon RS', 'Twinlite', 'Solarlite'],
-    img: 'https://images.pexels.com/photos/33181595/pexels-photo-33181595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    title: 'Teralis Keamanan',
+    desc: 'Pengaman jendela dan pintu dengan sentuhan estetis. Melindungi rumah dari risiko kejahatan tanpa membuat ruangan terasa terkungkung atau gelap.',
+    tags: ['Presisi Laser', 'Minimalis', 'Kustom'],
+    img: 'service/tralis.avif',
   },
   {
     no: '03',
     title: 'Pagar & Gerbang',
-    desc: 'Pagar minimalis, klasik, hingga desain kustom. Gerbang manual maupun otomatis dengan finishing cat duco atau powder coating premium.',
-    tags: ['Minimalis', 'Klasik', 'Otomatis'],
-    img: 'https://images.unsplash.com/photo-1700308232117-5cfe8282e8ae?crop=entropy&cs=srgb&fm=jpg&q=85',
+    desc: 'Wajah utama rumah Anda. Tersedia model dorong, lipat, hingga otomatis dengan sambungan las yang rapi dan cat tahan cuaca jangka panjang.',
+    tags: ['Sliding', 'Pagar Minimalis', 'Las Rapi'],
+    img: 'service/pagar.avif',
   },
   {
     no: '04',
-    title: 'Railing Tangga & Balkon',
-    desc: 'Railing stainless steel, tempered glass, dan kombinasi kayu. Presisi las argon, finishing halus, aman untuk keluarga.',
-    tags: ['Stainless', 'Kaca', 'Custom'],
-    img: 'https://images.unsplash.com/photo-1635348180022-2f7715fdecfa?crop=entropy&cs=srgb&fm=jpg&q=85',
+    title: 'Railing Tangga',
+    desc: 'Pegangan tangga yang kokoh untuk keamanan keluarga. Menggunakan material berkualitas tinggi dengan finishing yang halus dan presisi.',
+    tags: ['Stainless Steel', 'Kaca Tempered'],
+    img: 'service/railing.avif',
   },
   {
     no: '05',
-    title: 'Rolling Door & Folding Gate',
-    desc: 'Rolling door untuk ruko, gudang, dan garasi. Sistem manual maupun motor otomatis merek berkualitas dengan pemasangan presisi.',
-    tags: ['Manual', 'Otomatis', 'Perforated'],
-    img: 'https://images.pexels.com/photos/32494216/pexels-photo-32494216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-  },
-  {
-    no: '06',
-    title: 'Konstruksi Baja Berat',
-    desc: 'Struktur baja WF, H-Beam, dan CNP untuk gudang, workshop, mezzanine, hingga bangunan komersial. Perhitungan struktur terpercaya.',
-    tags: ['WF', 'H-Beam', 'Mezzanine'],
-    img: 'https://images.unsplash.com/photo-1527335988388-b40ee248d80c?crop=entropy&cs=srgb&fm=jpg&q=85',
+    title: 'Mezanin Custom',
+    desc: 'Solusi cerdas menambah luas ruangan tanpa perlu membongkar bangunan. Struktur besi ekstra kuat yang efisien untuk area rumah maupun tempat usaha.',
+    tags: ['Hemat Ruang', 'Kuat & Aman', 'Kustom'],
+    img: 'service/mejanin.avif',
   },
 ];
 
 export const portfolio = [
-  { title: 'Kanopi Alderon RS - Bandung', cat: 'Kanopi', img: 'https://images.pexels.com/photos/33652618/pexels-photo-33652618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1100&w=940', span: 'row-span-2' },
-  { title: 'Gerbang Minimalis - Jakarta', cat: 'Pagar & Gerbang', img: 'https://images.unsplash.com/photo-1753596726704-5c4bd0357742?w=900&q=85', span: '' },
-  { title: 'Railing Stainless - Depok', cat: 'Railing', img: 'https://images.unsplash.com/photo-1635348180022-2f7715fdecfa?w=900&q=85', span: '' },
-  { title: 'Konstruksi Gudang - Bekasi', cat: 'Konstruksi Baja', img: 'https://images.unsplash.com/photo-1527335988388-b40ee248d80c?w=1200&q=85', span: 'col-span-2' },
-  { title: 'Pagar Klasik - Tangerang', cat: 'Pagar', img: 'https://images.unsplash.com/photo-1700308232117-5cfe8282e8ae?w=900&q=85', span: '' },
-  { title: 'Rolling Door Ruko - Bogor', cat: 'Rolling Door', img: 'https://images.pexels.com/photos/32494216/pexels-photo-32494216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=940', span: '' },
-  { title: 'Kanopi Baja Ringan - Depok', cat: 'Kanopi', img: 'https://images.pexels.com/photos/12192753/pexels-photo-12192753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=940', span: '' },
-  { title: 'Tangga Industrial - Jakarta', cat: 'Railing', img: 'https://images.pexels.com/photos/38073198/pexels-photo-38073198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1100&w=940', span: 'row-span-2' },
+  { title: 'Kanopi Alderon', cat: 'Kanopi', img: PX_TALL('33652618'), span: 'row-span-2' },
+  { title: 'Gerbang Minimalis', cat: 'Pagar & Gerbang', img: UP('photo-1753596726704-5c4bd0357742'), span: '' },
+  { title: 'Railing Stainless', cat: 'Railing', img: UP('photo-1635348180022-2f7715fdecfa'), span: '' },
+  { title: 'Teralis Jendela Modern', cat: 'Teralis', img: UP('photo-1509644851169-2acc08aa25b5'), span: 'col-span-2' },
+  { title: 'Pagar Klasik', cat: 'Pagar', img: UP('photo-1700308232117-5cfe8282e8ae'), span: '' },
+  { title: 'Mezanin Custom', cat: 'Mezanin', img: 'service/mejanin.avif', span: '' },
+  { title: 'Kanopi Baja Ringan', cat: 'Kanopi', img: PX('12192753'), span: '' },
+  { title: 'Tangga Industrial', cat: 'Railing', img: PX_TALL('38073198'), span: 'row-span-2' },
 ];
 
 export const whyBlocks = [
   {
     label: 'PRESISI.',
-    body: 'Setiap sambungan las diperiksa oleh welder bersertifikat. Toleransi kurang dari 1 mm dari desain. Bukan sekadar rapi — tapi tepat.',
+    body: 'Desain kustom dengan pengukuran akurat dan pengelasan rapi. Kami memperhatikan detail finishing untuk menjamin kekuatan dan estetika struktur jangka panjang.',
   },
   {
-    label: 'GARANSI.',
-    body: 'Kami berani menjamin struktur & pengerjaan hingga 2 tahun. Bebas biaya perbaikan bila terjadi kegagalan struktur akibat kesalahan pengerjaan.',
+    label: 'TRANSPARAN.',
+    body: 'Harga rasional tanpa biaya siluman. Spesifikasi material dijelaskan secara detail sejak awal, sehingga Anda tahu persis apa yang Anda bayar.',
   },
   {
-    label: 'JUJUR.',
-    body: 'Harga jelas di awal, tanpa biaya siluman. Anda tahu persis material apa yang dipakai, dari mana asalnya, dan kenapa harganya segitu.',
+    label: 'TERBUKA.',
+    body: 'Ditangani tim profesional dengan proses yang mudah dipantau. Kami memberikan update progres berkala agar Anda tetap tenang dan yakin.',
   },
   {
-    label: 'CEPAT.',
-    body: 'Survey dalam 24 jam. Penawaran maksimal 2 hari kerja. Rata-rata pengerjaan proyek residensial selesai 30% lebih cepat dari kompetitor.',
+    label: 'KOMITMEN.',
+    body: 'Bagi kami, pekerjaan bukan sekadar selesai. Kami hadir memberikan garansi dan layanan after-sales untuk menjaga kepercayaan Anda hingga akhir.',
   },
 ];
 
 export const process = [
   { step: '01', title: 'Chat WhatsApp', desc: 'Ceritakan kebutuhan Anda lewat WhatsApp. Tim kami merespons dalam hitungan menit.', icon: 'MessageCircle' },
-  { step: '02', title: 'Survey Lokasi', desc: 'Tim survey datang gratis ke lokasi untuk mengukur, memotret, dan berdiskusi.', icon: 'MapPin' },
-  { step: '03', title: 'Desain & RAB', desc: 'Kami buatkan desain 3D dan RAB detail. Anda tahu persis apa yang Anda bayar.', icon: 'PenTool' },
+  { step: '02', title: 'Survey Lokasi', desc: 'Tim survey datang ke lokasi untuk pengukuran & konsultasi di lokasi.', icon: 'MapPin' },
+  { step: '03', title: 'Desain', desc: 'Kami buatkan desain kustom anda. Anda tahu persis apa yang Anda bayar.', icon: 'PenTool' },
   { step: '04', title: 'Produksi', desc: 'Fabrikasi di workshop kami. Foto progres dikirim berkala via WhatsApp.', icon: 'Hammer' },
   { step: '05', title: 'Instalasi', desc: 'Pemasangan di lokasi oleh tim berpengalaman. Rapi, cepat, tanpa merusak area sekitar.', icon: 'Wrench' },
-  { step: '06', title: 'Serah Terima & Garansi', desc: 'Pengecekan bersama, penyerahan kartu garansi, dan konsultasi perawatan gratis.', icon: 'ShieldCheck' },
-];
-
-export const stats = [
-  { num: '500+', label: 'Proyek Selesai' },
-  { num: '10', label: 'Tahun Pengalaman' },
-  { num: '4.9/5', label: 'Rating Pelanggan' },
-  { num: '15', label: 'Kota Terjangkau' },
+  { step: '06', title: 'Finishing & quality check', desc: 'Pengecekan detail untuk hasil yang sempurna', icon: 'ShieldCheck' },
 ];
 
 export const testimonials = [
   {
-    name: 'Pak Budi Santoso',
-    role: 'Pemilik Rumah, Depok',
-    body: 'Kanopi Alderon-nya rapi banget, tim kerjanya cepat dan bersih. Sudah 3 tahun tidak ada masalah sama sekali. Recommended.',
+    name: 'Besi Hollow',
+    role: 'Kuat & Kokoh',
+    body: 'Besi hollow dengan struktur yang kuat, ringan, dan stabil untuk rangka kanopi, pagar, pergola, serta kebutuhan industri modern.',
+    img: '/material/hollow.png',
   },
   {
-    name: 'Ibu Rina Wijaya',
-    role: 'Interior Designer, Jakarta',
-    body: 'Saya sering kolaborasi dengan Realisteel untuk railing dan pagar custom. Detail las argonnya premium, cocok untuk proyek high-end klien saya.',
+    name: 'Besi Plat Tebal',
+    role: 'Presisi & Sanggup Beban',
+    body: 'Besi plat tebal cocok untuk komponen utama dengan beban besar, tampilan rapi, dan presisi sambungan yang lebih terjamin.',
+    img: '/material/besi.jpg',
   },
   {
-    name: 'Pak Hendra Kusuma',
-    role: 'Owner Ruko, Bekasi',
-    body: 'Bangun gudang 400m2 dengan struktur baja WF. Selesai lebih cepat dari deadline, harga transparan. Tidak ada biaya tambahan mendadak.',
+    name: 'Stainless Steel',
+    role: 'Anti Karat',
+    body: 'Material stainless steel tahan korosi, tampil elegan, dan ideal untuk railing, tangga, serta area dengan kelembapan tinggi.',
+    img: '/material/stainless.webp',
   },
   {
-    name: 'Ibu Sarah Amelia',
-    role: 'Pemilik Cafe, Bogor',
-    body: 'Fasad besi hollow custom untuk cafe saya jadi ikonik banget. Banyak yang tanya "dibuatin dimana?". Terima kasih Realisteel!',
+    name: 'Atap Alderon',
+    role: 'Tahan Panas & Suara',
+    body: 'Atap alderon memberikan perlindungan optimal dari panas matahari serta reduksi suara, sehingga ruang terasa lebih nyaman.',
+    img: '/material/alderon.png',
+  },
+  {
+    name: 'Atap Polycarbonate',
+    role: 'Ringan & Tahan Benturan',
+    body: 'Polycarbonate ringan, kuat, dan tahan benturan, cocok untuk kanopi rumah dan area komersial yang butuh pencahayaan alami.',
+    img: '/material/atap.avif',
   },
 ];
 
 export const partners = [
-  'BlueScope Zacs', 'Alderon', 'Bondor', 'Krakatau Steel', 'Gunung Garuda', 'Sunrise Steel', 'Nippon Paint', 'Jotun',
+  'REALISTEEL', 'REALISTEEL', 'REALISTEEL', 'REALISTEEL', 'REALISTEEL', 'REALISTEEL', 'REALISTEEL', 'REALISTEEL',
 ];
 
-export const WA_LINK = 'https://wa.me/6281234567890?text=Halo%20Realisteel%2C%20saya%20ingin%20konsultasi%20proyek.';
+export const WA_NUMBER = "6281933724791";
+export const WA_MESSAGE = encodeURIComponent(
+  "Halo Realisteel, saya ingin konsultasi mengenai pembuatan [Kanopi / Pagar / Tralis / Railing] untuk lokasi saya. Boleh bantu estimasi biaya dan jadwal survei?"
+);
+
+export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;

@@ -4,13 +4,41 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Archivo:wght@400;500;600;700;800;900&display=swap');
 
+:root {
+  --brand-red: #c62828;
+  --brand-red-dark: #8d1f1f;
+  --bg-soft: #ececec;
+  --bg-card: rgba(255, 255, 255, 0.58);
+  --ink: #101010;
+  --muted: #4b5563;
+  --line: rgba(17, 17, 17, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ececec;
-  color: #0a0a0a;
+  background: var(--bg-soft);
+  color: var(--ink);
+}
+
+html, body {
+  overflow-x: clip;
+}
+
+::selection {
+  background: rgba(198, 40, 40, 0.2);
+  color: var(--ink);
+}
+
+/* Ensure images always reserve their aspect box so Lenis doesn't jump */
+img {
+  max-width: 100%;
 }
 
 .font-display {
@@ -48,6 +76,9 @@ body {
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.snap-always {
+  scroll-snap-stop: always;
+}
 
 @layer base {
   :root {

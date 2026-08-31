@@ -13,7 +13,7 @@ export default function TrustBanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 border-y border-black/10 py-10"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 border-y border-black/10 py-8 lg:py-10"
         >
           {trustBadges.map((b, i) => {
             const Icon = icons[i % icons.length];
@@ -24,9 +24,11 @@ export default function TrustBanner() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="flex flex-col items-start gap-2"
+                className="flex flex-col items-start gap-2 rounded-2xl border border-black/5 bg-white/40 p-4 shadow-[0_10px_25px_rgba(0,0,0,0.02)]"
               >
-                <Icon size={22} className="text-black"/>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-black">
+                  <Icon size={18} />
+                </div>
                 <div className="text-[15px] font-semibold text-black leading-tight">{b.name}</div>
                 <div className="text-[12px] text-neutral-600">{b.sub}</div>
               </motion.div>

@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { WA_LINK } from '../data/mock';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function WhatsAppFAB() {
   const [show, setShow] = useState(false);
@@ -47,7 +48,7 @@ export default function WhatsAppFAB() {
             aria-label="WhatsApp"
           >
             <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-40"/>
-            <MessageCircle size={24} className="relative z-10"/>
+            <WhatsAppIcon size={24} className="relative z-10 text-white"/>
           </a>
         </motion.div>
       )}

@@ -40,11 +40,11 @@ export default function Process() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative"
+                  className="relative rounded-[22px] border border-white/10 bg-white/[0.02] p-4 lg:p-5"
                 >
                   <div className="relative flex items-center justify-center w-24 h-24 rounded-full bg-black border-2 border-white/15 mb-6">
-                    <div className="absolute inset-0 rounded-full bg-[#f5d949]/10 blur-xl"/>
-                    <Icon size={28} className="text-[#f5d949] relative z-10"/>
+                    <div className="absolute inset-0 rounded-full bg-[#C62828]/15 shadow-[0_0_20px_rgba(198,40,40,0.2)]"/>
+                    <Icon size={28} className="text-[#C62828] relative z-10"/>
                   </div>
                   <div className="text-[12px] font-mono text-neutral-500 mb-2">STEP {p.step}</div>
                   <h4 className="text-[20px] font-bold text-white mb-2 tracking-tight">{p.title}</h4>

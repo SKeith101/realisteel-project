@@ -27,7 +27,7 @@ export const services = [
     title: 'Kanopi Minimalis',
     desc: 'Pelindung area carport dan teras dari hujan serta terik matahari. Dibuat rapi dengan pilihan atap dingin yang bikin suasana rumah tetap adem dan elegan.',
     tags: ['Carport', 'Atap Alderon', 'Polycarbonate'],
-    img: 'service/kanopi.avif',
+    img: 'service/kanopi.jpg',
   },
   {
     no: '02',
@@ -60,7 +60,7 @@ export const services = [
 ];
 
 export const portfolio = [
-  { title: 'Kanopi Alderon', cat: 'Kanopi', img: PX_TALL('33652618'), span: 'row-span-2' },
+  { title: 'Kanopi Alderon', cat: 'Kanopi', img: "service/kanopi.jpg", span: 'row-span-2' },
   { title: 'Gerbang Minimalis', cat: 'Pagar & Gerbang', img: UP('photo-1753596726704-5c4bd0357742'), span: '' },
   { title: 'Railing Stainless', cat: 'Railing', img: UP('photo-1635348180022-2f7715fdecfa'), span: '' },
   { title: 'Teralis Jendela Modern', cat: 'Teralis', img: UP('photo-1509644851169-2acc08aa25b5'), span: 'col-span-2' },

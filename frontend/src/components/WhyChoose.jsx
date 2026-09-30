@@ -39,13 +39,13 @@ export default function WhyChoose() {
                   whileInView={{ x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-display text-black text-[38px] min-[400px]:text-[48px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[120px] uppercase leading-[0.95] tracking-tight break-words"
+                  className="text-display text-black text-[38px] min-[400px]:text-[48px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[100px] uppercase leading-[0.95] tracking-tight break-words"
                 >
                   {b.label}
                 </motion.h3>
               </div>
               <div className="lg:col-span-3">
-                <p className="text-[15px] sm:text-[17px] lg:text-[20px] leading-[1.6] text-neutral-800 max-w-md lg:mt-8">
+                <p className="text-[15px] sm:text-[17px] lg:text-[20px] leading-[1.6] text-neutral-800 max-w-md lg:mt-0">
                   {b.body}
                 </p>
               </div>

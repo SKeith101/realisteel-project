@@ -28,7 +28,7 @@ export default function Process() {
 
         <div className="relative">
           {/* Horizontal line */}
-          <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-white/10"/>
+          <div className="hidden lg:block absolute top-[65px] left-0 right-0 h-px bg-white/10"/>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-4">
             {process.map((p, i) => {

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Phone } from 'lucide-react';
-import { WA_LINK } from '../data/mock';
+import { Link } from 'react-router-dom';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CTA() {
@@ -29,13 +29,13 @@ export default function CTA() {
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3 lg:justify-end">
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-between gap-3 bg-[#C62828] text-white px-8 py-5 rounded-full font-semibold text-[16px] hover:bg-[#8d1f1f] transition-colors">
+              <Link to="/FormKonsultasi" className="group inline-flex items-center justify-between gap-3 bg-[#C62828] text-white px-8 py-5 rounded-full font-semibold text-[16px] hover:bg-[#8d1f1f] transition-colors">
                 <span className="inline-flex items-center gap-3">
                   <WhatsAppIcon size={20} className="text-white"/>
                   Chat WhatsApp
                 </span>
                 <ArrowUpRight size={18} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"/>
-              </a>
+              </Link>
               <a href="tel:+6281933724791" className="group inline-flex items-center justify-between gap-3 bg-white/10 border border-white/15 text-white px-8 py-5 rounded-full font-medium text-[16px] hover:bg-white/15 transition-colors">
                 <span className="inline-flex items-center gap-3">
                   <Phone size={18}/>

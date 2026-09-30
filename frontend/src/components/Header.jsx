@@ -2,12 +2,16 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLenis } from 'lenis/react';
-import { navItems, WA_LINK } from '../data/mock';
+import { useLocation, useNavigate, Link } from 'react-router-dom'; // 1. Import router hooks + Link
+import { navItems } from '../data/mock';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  const location = useLocation(); // 2. Cek posisi halaman saat ini
+  const navigate = useNavigate(); // 3. Alat untuk pindah halaman otomatis
 
   const lenis = useLenis((l) => {
     setScrolled(l.scroll > 20);
@@ -17,6 +21,13 @@ export default function Header() {
     e.preventDefault();
     setOpen(false);
 
+    // 4. Jika user sedang di halaman form konsultasi, pindahkan dulu ke Beranda + Section-nya
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      return;
+    }
+
+    // 5. Jika sedang di halaman utama, jalankan smooth scroll Lenis (tanpa refresh)
     if (!href || href === '#' || href === '#hero') {
       lenis?.scrollTo(0, { duration: 1.2 });
     } else {
@@ -61,15 +72,13 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/FormKonsultasi"
             className="inline-flex items-center gap-2 bg-[#C62828] text-white px-6 py-3 rounded-full text-[15px] font-medium hover:bg-neutral-800 transition-colors"
           >
             <WhatsAppIcon size={16} className="text-white"/>
             Konsultasi Gratis
-          </a>
+          </Link>
         </div>
 
         <button
@@ -103,9 +112,9 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 mt-2 bg-[#C62828] text-white px-6 py-3 rounded-full font-medium">
+            <Link to="/FormKonsultasi" className="flex items-center justify-center gap-2 mt-2 bg-[#C62828] text-white px-6 py-3 rounded-full font-medium">
               <WhatsAppIcon size={16} className="text-white"/> Konsultasi Gratis
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

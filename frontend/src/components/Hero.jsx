@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLenis } from 'lenis/react';
-import { WA_LINK } from '../data/mock';
+import { Link } from 'react-router-dom';
 import WhatsAppIcon from './WhatsAppIcon';
 
 const word = {
@@ -23,7 +23,7 @@ export default function Hero() {
     <section id="hero" className="relative pt-36 lg:pt-44 pb-20 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/background/background-hero.jpg"
+          src="/background/background-hero2.webp"
           alt="Hero Background"
           className="w-full h-full object-cover object-center"
         />
@@ -38,14 +38,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="inline-flex items-center gap-2 bg-white/10 border border-white/15 backdrop-blur-sm rounded-full px-4 py-2 text-[12px] font-medium uppercase tracking-[0.18em] text-white/90 mb-8 shadow-lg shadow-black/10"
+            className="inline-flex items-center gap-2 backdrop-blur-sm rounded-full px-4 py-2 text-[12px] font-medium uppercase tracking-[0.18em] text-white/90 mb-8 shadow-lg shadow-black/10"
           >
             <span className="w-2 h-2 rounded-full bg-[#C62828] animate-pulse"/>
             Kualitas & Kepercayaan
           </motion.div>
 
           <h1 className="text-display text-white text-[52px] sm:text-[84px] lg:text-[110px] xl:text-[132px] uppercase leading-[0.88] tracking-[-0.05em]">
-            {['Build', 'Strong', 'Last', 'Strong',].map((line, i) => (
+            {['Build', 'Strong', 'Last', 'Long',].map((line, i) => (
               <span key={i} className="block overflow-hidden">
                 <motion.span
                   custom={i}
@@ -76,11 +76,11 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 1.1 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-[#C62828] text-white px-7 py-4 rounded-full font-medium hover:bg-[#8d1f1f] transition-colors shadow-lg shadow-black/20">
+            <Link to="/FormKonsultasi" className="group inline-flex items-center gap-3 bg-[#C62828] text-white px-7 py-4 rounded-full font-medium hover:bg-[#8d1f1f] transition-colors shadow-lg shadow-black/20">
               <WhatsAppIcon size={18} className="text-white"/>
               Konsultasi Gratis via WhatsApp
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1"/>
-            </a>
+            </Link>
             <a href="#portofolio" onClick={handlePortfolioClick} className="inline-flex items-center gap-2 border border-white/20 bg-white/5 text-white rounded-full px-7 py-4 font-medium hover:bg-white hover:text-black transition-colors backdrop-blur-sm">
               Lihat Galeri
             </a>

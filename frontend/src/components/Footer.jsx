@@ -64,13 +64,13 @@ const contactInfo = [
 
 // Data Kolom Navigasi
 const cols = [
-  { 
-    title: 'Layanan', 
-    links: ['Kanopi', 'Pagar & Gerbang', 'Teralis Keamanan', 'Railing Tangga', 'Mezanin Custom'] 
+  {
+    title: 'Layanan',
+    links: ['Kanopi', 'Pagar & Gerbang', 'Teralis Keamanan', 'Railing Tangga', 'Mezanin Custom']
   },
-  { 
-    title: 'Wilayah', 
-    links: ['Jakarta', 'Bogor', 'Depok', 'Tangerang', 'Bekasi', 'Bandung'] 
+  {
+    title: 'Wilayah',
+    links: ['Jakarta', 'Bogor', 'Depok', 'Tangerang', 'Bekasi', 'Bandung']
   },
 ];
 
@@ -80,9 +80,9 @@ export default function Footer() {
   const handleScroll = (e, targetId) => {
     // Abaikan jika bukan tautan hash internal
     if (!targetId.startsWith('#')) return;
-    
+
     e.preventDefault();
-    
+
     if (targetId === '#hero') {
       lenis?.scrollTo(0, { duration: 1.2 });
     } else {
@@ -100,12 +100,12 @@ export default function Footer() {
     <footer className="bg-black text-white pt-20 pb-10 relative overflow-hidden">
       <div className="mx-auto px-6 lg:px-10 max-w-[1600px] relative z-10">
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:items-start">
-          
+
           {/* Kolom Kiri: Brand & Kontak */}
           <div className="max-w-xl lg:w-[52%]">
-            <a 
-              href="#hero" 
-              onClick={(e) => handleScroll(e, '#hero')} 
+            <a
+              href="#hero"
+              onClick={(e) => handleScroll(e, '#hero')}
               className="inline-block group"
               aria-label="Kembali ke atas"
             >
@@ -115,7 +115,7 @@ export default function Footer() {
                 className="h-10 lg:h-12 w-auto object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-105"
               />
             </a>
-            
+
             <p className="mt-6 text-neutral-400 text-[15px] leading-relaxed max-w-md">
               Realisteel adalah spesialis pembuatan kanopi, pagar, tralis, dan railing custom dengan material berkualitas tinggi, pengerjaan rapi, dan bergaransi.
             </p>
@@ -195,7 +195,8 @@ export default function Footer() {
 
         {/* Teks Raksasa Latar Belakang */}
         <div className="mt-16 text-center overflow-hidden pointer-events-none select-none">
-          <div className="text-[80px] sm:text-[150px] md:text-[220px] lg:text-[280px] xl:text-[270px] leading-[0.85] uppercase text-white/[0.04] font-black tracking-tighter">
+          {/* text-[clamp(60px,15vw,200px)] akan otomatis menyesuaikan layar */}
+          <div className="text-[clamp(60px,15vw,200px)] leading-[0.85] uppercase text-white/[0.09] font-black tracking-tighter">
             Realisteel
           </div>
         </div>

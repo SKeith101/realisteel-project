@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { WA_LINK } from '../data/mock';
+import { Link } from 'react-router-dom'; // Tambahkan ini untuk navigasi internal
 import WhatsAppIcon from './WhatsAppIcon';
+// import { WA_LINK } from '../data/mock'; // Hapus atau comment ini karena kita arahkan ke halaman form
 
 export default function WhatsAppFAB() {
   const [show, setShow] = useState(false);
@@ -32,7 +33,8 @@ export default function WhatsAppFAB() {
                 exit={{ opacity: 0, x: 10 }}
                 className="bg-white text-neutral-800 rounded-2xl shadow-xl px-4 py-3 pr-9 relative max-w-[240px] text-[13.5px] leading-snug border border-black/5"
               >
-                Butuh konsultasi cepat? Chat kami &mdash; balas dalam menit.
+                {/* Teks sedikit disesuaikan agar sesuai dengan konteks form */}
+                Butuh konsultasi? Isi form singkat kami &mdash; balas dalam menit.
                 <button onClick={() => setTip(false)} className="absolute top-2 right-2 text-neutral-400 hover:text-black">
                   <X size={14}/>
                 </button>
@@ -40,16 +42,15 @@ export default function WhatsAppFAB() {
             )}
           </AnimatePresence>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Mengubah <a> menjadi <Link> dan mengarahkan ke route form */}
+          <Link
+            to="/FormKonsultasi"
             className="relative w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-105 transition-transform"
             aria-label="WhatsApp"
           >
             <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-40"/>
             <WhatsAppIcon size={24} className="relative z-10 text-white"/>
-          </a>
+          </Link>
         </motion.div>
       )}
     </AnimatePresence>

@@ -1,14 +1,28 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { ReactLenis } from "lenis/react";
 import Home from "./pages/Home.jsx";
 import FormKonsultasi from './pages/FormKonsultasi';
+
+const PageViewTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq('track', 'PageView');
+    }
+  }, [location]);
+
+  return null;
+};
 
 function App() {
   return (
     <ReactLenis root options={{ lerp: 0.04, wheelMultiplier: 1.4, smoothWheel: true }}>
       <div className="App">
         <BrowserRouter>
+          <PageViewTracker />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/FormKonsultasi" element={<FormKonsultasi />} />

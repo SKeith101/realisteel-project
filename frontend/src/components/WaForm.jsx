@@ -98,6 +98,11 @@ export default function WaForm() {
         // Cegah submit jika nomor WhatsApp tidak valid
         if (waError) return;
 
+        // Trigger Meta Pixel Event "Lead"
+        if (window.fbq) {
+            window.fbq('track', 'Lead');
+        }
+
         const adminWA = '6281933724791';
 
         // Mengambil waktu saat form disubmit
